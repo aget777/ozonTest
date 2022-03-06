@@ -15,7 +15,7 @@ def setDealInFile(dealModels) -> None:
         file.writelines('orderId: ' + str(dealModel.orderId) + '\n')
         file.writelines('itemsName: ' + str(dealModel.itemsName) + '\n')
         file.writelines('itemsSku: ' + str(dealModel.itemsSku) + '\n')
-        file.writelines('status: ' + str(dealModel.status) + '\n')
+        # file.writelines('status: ' + str(dealModel.status) + '\n')
         file.writelines('totalPrice: ' + str(dealModel.totalPrice) + '\n')
         file.writelines('\n')
 

@@ -29,9 +29,9 @@ def _getDataFrameByDealModels(dealModels):
     for dealModel in dealModels:
         dateCreatedList.append(dealModel.dateCreated)
         orderIdList.append(dealModel.orderId)
-        itemsNameList.append(dealModel.userId)
-        itemsSkuList.append(dealModel.chrtId)
-        userStatusList.append(dealModel.userStatus)
+        itemsNameList.append(dealModel.itemsName)
+        itemsSkuList.append(dealModel.itemsSku)
+        # userStatusList.append(dealModel.userStatus)
         totalPriceList.append(dealModel.totalPrice)
 
     # Убрать в константы. Вообще подумать, как лучше все это организовать
@@ -42,7 +42,7 @@ def _getDataFrameByDealModels(dealModels):
                  'OrderId': orderIdList,
                  'itemsName': itemsNameList,
                  'itemsSku': itemsSkuList,
-                 'UserStatus': userStatusList,
+                 # 'UserStatus': userStatusList,
                  'TotalPrice': totalPriceList})
 
     return dataFrame

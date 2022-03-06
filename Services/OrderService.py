@@ -19,17 +19,24 @@ def getDealModels():
     page_size = 1000
     baseURL = 'https://api-seller.ozon.ru'
     orderUrl = '/v3/finance/transaction/list'
+    head = stringBuilder.getHeaders()
+    body = stringBuilder.getOrderUrl(dateStart, dateEnd, statusModels, page_size)
 
-    while True:
+    i = 0
+    while i < 1:
         # Подумать над асинхронным запросом
         url = baseURL + orderUrl
+        # print(url)
+        # print(head)
+        # print(body)
         response = requests.post(url, headers=head, data=body)
 
         # Логировать ошибки!
+        # print(response.status_code)
         if response.status_code != 200:
             break
-
-        jsonResults = response.json()['operations']
+        print(response.json())
+        jsonResults = response.json()['result']['operations']
         print(jsonResults)
         # Логировать такие случаи, чтобы понимать, сколько записей выгрузили
         if len(jsonResults) == 0:
@@ -38,7 +45,7 @@ def getDealModels():
         dealModels += _mapModels(jsonResults)
 
         print(len(jsonResults))
-
+        i += 1
     return dealModels
 
 # На первое время сойдет
