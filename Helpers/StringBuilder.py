@@ -19,4 +19,9 @@ def getOrderUrl(dateStart='', dateEnd='', statusModels='', page_size=1000):
     body = json.dumps(body)
     return body
 
+def getAnalyticsReport(dateStart='', dateEnd='', metricsArr=[], dimensionArr=[], filtersArr=[], key='', order='', limit=1000, offset=0):
+    body = {'date_from': dateStart, 'date_to': dateEnd, 'metrics': metricsArr,'dimension': dimensionArr, 'filters': filtersArr, 'sort': [{'key': key, 'order': order}], 'limit': limit, 'offset': offset}
+    body = json.dumps(body)
+    return body
+
 

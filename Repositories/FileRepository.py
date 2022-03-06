@@ -15,11 +15,47 @@ def setDealInFile(dealModels) -> None:
         file.writelines('orderId: ' + str(dealModel.orderId) + '\n')
         file.writelines('itemsName: ' + str(dealModel.itemsName) + '\n')
         file.writelines('itemsSku: ' + str(dealModel.itemsSku) + '\n')
-        # file.writelines('status: ' + str(dealModel.status) + '\n')
         file.writelines('totalPrice: ' + str(dealModel.totalPrice) + '\n')
+        file.writelines('totalCommission: ' + str(dealModel.totalCommission) + '\n')
+        file.writelines('orderDate: ' + str(dealModel.orderDate) + '\n')
+        file.writelines('warehouseId: ' + str(dealModel.warehouseId) + '\n')
         file.writelines('\n')
 
     file.close()
+
+
+def setAnalyticsInFile(analyticsModels) -> None:
+    # path = 'E:\\Wildberries\\API\\WildbberiesData\\DataTest'
+    path = r'C:\Users\Lenovo\Downloads\01_Текущие'
+    if not os.path.exists(path):
+        createCatalog(path)
+
+    file = open(path + '\\analyticsTestResult', 'w', encoding='utf-8')
+
+    for analyticsModel in analyticsModels:
+        file.writelines('skuId: ' + str(analyticsModel.skuId) + '\n')
+        file.writelines('skuName: ' + str(analyticsModel.skuName) + '\n')
+        file.writelines('orderDay: ' + str(analyticsModel.orderDay) + '\n')
+        file.writelines('brandId: ' + str(analyticsModel.brandId) + '\n')
+        file.writelines('brandName: ' + str(analyticsModel.brandName) + '\n')
+        file.writelines('modelId: ' + str(analyticsModel.modelId) + '\n')
+        file.writelines('modelName: ' + str(analyticsModel.modelName) + '\n')
+        file.writelines('hitsView: ' + str(analyticsModel.hitsView) + '\n')
+        file.writelines('sessionView: ' + str(analyticsModel.sessionView) + '\n')
+        file.writelines('hitsToCart: ' + str(analyticsModel.hitsToCart) + '\n')
+        file.writelines('convToCart: ' + str(analyticsModel.convToCart) + '\n')
+        file.writelines('revenue: ' + str(analyticsModel.revenue) + '\n')
+        file.writelines('returns: ' + str(analyticsModel.returns) + '\n')
+        file.writelines('cancellations: ' + str(analyticsModel.cancellations) + '\n')
+        file.writelines('orderedUnits: ' + str(analyticsModel.orderedUnits) + '\n')
+        file.writelines('\n')
+
+    file.close()
+
+
+
+
+
 
 # Пока костыль, потом посмотреть доработать
 def createCatalog(path):

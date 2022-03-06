@@ -2,6 +2,7 @@ class URLs:
     def __init__(self) -> None:
         self.baseURL = 'https://api-seller.ozon.ru'
         self.orderUrl = '/v3/finance/transaction/list'
+        self.analyticsData = '/v1/analytics/data'
 
 # Первое, что нужно убрать отсюда
 # Или доработать
