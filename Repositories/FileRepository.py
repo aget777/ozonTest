@@ -8,7 +8,7 @@ def setDealInFile(dealModels) -> None:
     if not os.path.exists(path):
         createCatalog(path)
 
-    file = open(path + '\\dealTestResult', 'w', encoding='utf-8')
+    file = open(path + '\\postTestResult', 'w', encoding='utf-8')
 
     for dealModel in dealModels:
         file.writelines('dateCreated: ' + str(dealModel.dateCreated) + '\n')
@@ -52,6 +52,33 @@ def setAnalyticsInFile(analyticsModels) -> None:
 
     file.close()
 
+def setPostsInFile(postsModels) -> None:
+    # path = 'E:\\Wildberries\\API\\WildbberiesData\\DataTest'
+    path = r'C:\Users\Lenovo\Downloads\01_Текущие'
+    if not os.path.exists(path):
+        createCatalog(path)
+
+    file = open(path + '\\postsTestResult', 'w', encoding='utf-8')
+
+    for postsModel in postsModels:
+        file.writelines('orderId: ' + str(postsModel.orderId) + '\n')
+        file.writelines('orderNumber: ' + str(postsModel.orderNumber) + '\n')
+        file.writelines('inProcessAt: ' + str(postsModel.inProcessAt) + '\n')
+        file.writelines('price: ' + str(postsModel.price) + '\n')
+        file.writelines('name: ' + str(postsModel.name) + '\n')
+        file.writelines('sku: ' + str(postsModel.sku) + '\n')
+        file.writelines('quantity: ' + str(postsModel.quantity) + '\n')
+        file.writelines('region: ' + str(postsModel.region) + '\n')
+        file.writelines('city: ' + str(postsModel.city) + '\n')
+        file.writelines('deliveryDateEnd: ' + str(postsModel.deliveryDateEnd) + '\n')
+        file.writelines('commissionAmount: ' + str(postsModel.commissionAmount) + '\n')
+        file.writelines('commissionPercent: ' + str(postsModel.commissionPercent) + '\n')
+        file.writelines('payout: ' + str(postsModel.payout) + '\n')
+        file.writelines('productId: ' + str(postsModel.productId) + '\n')
+        file.writelines('productPrice: ' + str(postsModel.productPrice) + '\n')
+        file.writelines('\n')
+
+    file.close()
 
 
 

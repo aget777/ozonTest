@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2b05772-dae6-47a9-80aa-6e84afea0dfb" name="Changes" comment="Add userStatus">
-      <change afterPath="$PROJECT_DIR$/Services/AnalyticsService.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services/PostsService.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Helpers/StringBuilder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Helpers/StringBuilder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Constans.py" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Constans.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Models/ResponseModels.py" beforeDir="false" afterPath="$PROJECT_DIR$/Models/ResponseModels.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Repositories/ExcelRepository.py" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/ExcelRepository.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Repositories/FileRepository.py" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/FileRepository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/OrderService.py" beforeDir="false" afterPath="$PROJECT_DIR$/Services/OrderService.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resultOzon.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/resultOzon.xlsx" afterDir="false" />
     </list>
@@ -142,34 +140,24 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Services/AnalyticsService.py</url>
-          <line>62</line>
-          <option name="timeStamp" value="13" />
+          <url>file://$PROJECT_DIR$/Services/PostsService.py</url>
+          <line>45</line>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Services/AnalyticsService.py</url>
-          <line>64</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Models/ResponseModels.py</url>
-          <line>15</line>
-          <option name="timeStamp" value="16" />
+          <url>file://$PROJECT_DIR$/Services/PostsService.py</url>
+          <line>61</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Models/ResponseModels.py</url>
-          <line>16</line>
-          <option name="timeStamp" value="17" />
+          <line>35</line>
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Models/ResponseModels.py</url>
-          <line>17</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Services/AnalyticsService.py</url>
-          <line>78</line>
-          <option name="timeStamp" value="19" />
+          <url>file://$PROJECT_DIR$/Services/PostsService.py</url>
+          <line>36</line>
+          <option name="timeStamp" value="28" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

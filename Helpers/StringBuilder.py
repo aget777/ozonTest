@@ -25,3 +25,8 @@ def getAnalyticsReport(dateStart='', dateEnd='', metricsArr=[], dimensionArr=[],
     return body
 
 
+def getPostsReport(dir='ASC', dateStart='', status='delivered' , dateEnd='', limit=1000, offset=0, translit=True, analytics_data=True, financial_data=True):
+    body = {'dir': dir, 'filter': {'since': dateStart, 'status':status, 'to': dateEnd}, 'limit': limit, 'offset': offset, translit:translit, 'with': {'analytics_data':analytics_data, 'financial_data':financial_data}}
+    body = json.dumps(body)
+    return body
+

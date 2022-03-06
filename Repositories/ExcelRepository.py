@@ -125,3 +125,74 @@ def _getDataFrameByAnalyticsModels(analyticsModels):
 
 
     return dataFrame
+
+def writePostsDataFramesInExcel(postsModels):
+    writer = pd.ExcelWriter('./postsOzon.xlsx', engine='xlsxwriter')
+
+    # Сделать более красивый маппинг
+    postsDataFrame = _getDataFrameByPostsModels(postsModels)
+    dataSheets = {'postsResult': postsDataFrame}
+
+    for sheetName in dataSheets.keys():
+        dataSheets[sheetName].to_excel(writer, sheet_name=sheetName, index=False)
+
+    writer.save()
+
+def _getDataFrameByPostsModels(postsModels):
+    orderIdList = []
+    orderNumberList = []
+    inProcessAtList = []
+    priceList = []
+    nameList = []
+    skuList = []
+    quantityList = []
+    regionList = []
+    cityList = []
+    deliveryDateEndList = []
+    commissionAmountList = []
+    commissionPercentList = []
+    payoutList = []
+    productIdList = []
+    productPriceList = []
+
+    # Нужны нормальные мапперы
+    # И модели бы развернуть в отдельном проекте
+    for postsModel in postsModels:
+        orderIdList.append(postsModel.orderId)
+        orderNumberList.append(postsModel.orderNumber)
+        inProcessAtList.append(postsModel.inProcessAt)
+        priceList.append(postsModel.price)
+        nameList.append(postsModel.name)
+        skuList.append(postsModel.sku)
+        quantityList.append(postsModel.quantity)
+        regionList.append(postsModel.region)
+        cityList.append(postsModel.city)
+        deliveryDateEndList.append(postsModel.deliveryDateEnd)
+        commissionAmountList.append(postsModel.commissionAmount)
+        commissionPercentList.append(postsModel.commissionPercent)
+        payoutList.append(postsModel.payout)
+        productIdList.append(postsModel.productId)
+        productPriceList.append(postsModel.productPrice)
+
+    # Убрать в константы. Вообще подумать, как лучше все это организовать
+    # Пока получается помойка без плана
+    # Нужен план развития проекта и план изменений проекта
+    # И доска с задачами
+    dataFrame = pd.DataFrame({'orderId': orderIdList,
+                 'orderNumber': orderNumberList,
+                 'inProcessAt': inProcessAtList,
+                 'price': priceList,
+                 'name': nameList,
+                 'sku': skuList,
+                 'quantity': quantityList,
+                 'region': regionList,
+                 'city': cityList,
+                 'deliveryDateEnd': deliveryDateEndList,
+                 'commissionAmount': commissionAmountList,
+                 'commissionPercent': commissionPercentList,
+                 'payout': payoutList,
+                 'productId': productIdList,
+                 'productPrice': productPriceList})
+
+
+    return dataFrame
